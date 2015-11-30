@@ -1,0 +1,23 @@
+{
+  "version": "0.0.0-*",
+  "description": "<%= namespace %> Akka.net Console Application",
+  "authors": [ "" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "tooling": {
+    "defaultNamespace": "<%= namespace %>"
+  },
+
+  "dependencies": {
+    "Akka" : "1.0.4"
+  },
+
+  "commands": {
+    "run": "<%= namespace %>"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}

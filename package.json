@@ -15,7 +15,9 @@
   "dependencies": {
     "yeoman-generator": "^0.21.1",
     "chalk": "^1.0.0",
-    "yosay": "^1.0.2"
+    "yosay": "^1.0.2",
+    "uuid": "^2.0.1",
+    "vs_projectname": "^1.0.0"
   },
   "devDependencies": {
     "yeoman-assert": "^2.0.0",
