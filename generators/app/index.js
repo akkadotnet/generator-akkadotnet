@@ -7,7 +7,7 @@ var guid = require('uuid');
 var projectName = require('vs_projectname');
 
 module.exports = yeoman.generators.Base.extend({
-  constructor: function() {
+  constructor: function () {
     yeoman.generators.Base.apply(this, arguments);
   },
   init: function () {
@@ -40,9 +40,9 @@ module.exports = yeoman.generators.Base.extend({
     var done = this.async();
     var app = '';
     switch (this.type) {
-      case 'empty':
-        app = 'app';
-        break;
+    case 'empty':
+      app = 'app';
+      break;
     }
     var prompts = [{
       name: 'applicationName',
@@ -61,17 +61,17 @@ module.exports = yeoman.generators.Base.extend({
     this.sourceRoot(path.join(__dirname, './templates/projects'));
 
     switch (this.type) {
-      case 'empty':
-        this.sourceRoot(path.join(__dirname, './templates/projects/' + this.type));
+    case 'empty':
+      this.sourceRoot(path.join(__dirname, './templates/projects/' + this.type));
 
-        this.template(this.sourceRoot() + '/Program.cs', this.applicationName + '/src/' + this.applicationName + '/Program.cs', this.templatedata);
+      this.template(this.sourceRoot() + '/Program.cs', this.applicationName + '/src/' + this.applicationName + '/Program.cs', this.templatedata);
 
-        this.template(this.sourceRoot() + '/project.json', this.applicationName + '/src/' + this.applicationName + '/project.json', this.templatedata);
+      this.template(this.sourceRoot() + '/project.json', this.applicationName + '/src/' + this.applicationName + '/project.json', this.templatedata);
 
-        this.template(this.sourceRoot() + '/global.json', this.applicationName + '/global.json', this.templatedata);
+      this.template(this.sourceRoot() + '/global.json', this.applicationName + '/global.json', this.templatedata);
 
-        this.template(path.join(__dirname, '../../templates/Dockerfile.txt'), this.applicationName + '/Dockerfile', this.templatedata);
-        break;
+      this.template(path.join(__dirname, '../../templates/Dockerfile.txt'), this.applicationName + '/Dockerfile', this.templatedata);
+      break;
     }
   }
 });
