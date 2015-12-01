@@ -2,3 +2,10 @@ language: node_js
 node_js:
   - v5
   - v4
+
+deploy:
+  provider: npm
+  email: "joshuabnjmn@gmail.com"
+  api_key: "$API_KEY"
+  on:
+    branch: master
