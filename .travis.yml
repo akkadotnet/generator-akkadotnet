@@ -3,9 +3,7 @@ node_js:
   - v5
   - v4
 
-before_script:
-  - npm install -g gulp
-script: gulp
+before_deploy: "npm install"
 
 deploy:
   provider: npm
