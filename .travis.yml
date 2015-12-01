@@ -3,6 +3,10 @@ node_js:
   - v5
   - v4
 
+before_script:
+  - npm install -g gulp
+script: gulp
+
 deploy:
   provider: npm
   email: "joshuabnjmn@gmail.com"
