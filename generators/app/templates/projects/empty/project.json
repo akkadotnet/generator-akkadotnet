@@ -1,23 +1,19 @@
 {
-  "version": "0.0.0-*",
-  "description": "<%= namespace %> Akka.net Console Application",
-  "authors": [ "" ],
-  "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
-  "tooling": {
-    "defaultNamespace": "<%= namespace %>"
+  "version": "1.0.0-*",
+  "description": "<%= namespace %> Akka.NET Console Application",
+
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "embed": {
+      "includeFiles": [ "reference.conf" ]
+    }
   },
 
   "dependencies": {
-    "Akka" : "1.0.4"
-  },
-
-  "commands": {
-    "run": "<%= namespace %>"
+    "Akka": "1.1.1"
   },
 
   "frameworks": {
-    "dnx451": { }
+    "net45": {}
   }
 }
