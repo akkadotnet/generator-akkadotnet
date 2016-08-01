@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using Akka.Actor;
+using Akka.Configuration;
 
 namespace <%= namespace %>
 {
@@ -8,8 +9,10 @@ namespace <%= namespace %>
     {
         public static void Main(string[] args)
         {
+            var config = ConfigurationFactory.FromResource<Program>("<%= namespace %>.reference.conf");
+
             // create a new actor system (a container for actors)
-            var system = ActorSystem.Create("MySystem");
+            var system = ActorSystem.Create("MySystem", config);
 
             // create actor and get a reference to it.
             // this will be an "ActorRef", which is not a
@@ -27,25 +30,6 @@ namespace <%= namespace %>
             {
                 Thread.Sleep(1);
             }
-        }
-    }
-
-    public class GreetingActor : ReceiveActor
-    {
-        public GreetingActor()
-        {
-            // Tell the actor to respond to the Greet message
-            Receive<Greet>(greet => Console.WriteLine("Hello {0}", greet.Who));
-        }
-    }
-
-    public class Greet
-    {
-        public string Who { get; private set; }
-
-        public Greet(string who)
-        {
-            Who = who;
         }
     }
 }

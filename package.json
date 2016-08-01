@@ -1,6 +1,6 @@
 {
   "name": "generator-akkadotnet",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "yo for akka.net projects",
   "homepage": "https://github.com/akkadotnet/generator-akkadotnet#readme",
   "author": "annymsMthd <benjamin@syncromatics.com>",
