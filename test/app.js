@@ -14,7 +14,9 @@ describe('generator-akkadotnet:app', function () {
     assert.file([
       'test/src/test/Program.cs',
       'test/src/test/project.json',
-      'test/Dockerfile',
+      'test/src/test/reference.conf',
+      'test/src/test/Actors/GreetingACtor.cs',
+      'test/src/test/Messages/Greet.cs',
       'test/global.json'
     ]);
   });
